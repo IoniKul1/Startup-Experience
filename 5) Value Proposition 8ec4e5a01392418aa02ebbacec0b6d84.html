@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>5) Value Proposition</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8ec4e5a0-1392-418a-a02e-bbacec0b6d84" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📍</span></div><h1 class="page-title">5) Value Proposition</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date</th><td><time>@29/01/2024</time></td></tr></tbody></table></header><div class="page-body"><h1 id="502c29c2-055c-4219-b1e4-7c57a734613b" class="">Value proposition</h1><figure id="37885714-0a69-436b-b244-8a8694ebb82f" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled.png"><img style="width:720px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled.png"/></a></figure><figure id="f24fe926-efff-4218-b9e2-7804797a0465" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%201.png"><img style="width:720px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%201.png"/></a></figure><hr id="eff01c55-8151-47f4-a4e2-60704becc990"/><h2 id="867f9cfa-1c07-46c7-8185-4d0ecaf45f22" class="">Value Proposition PMF Traction - Anna Dementyeva</h2><p id="80501453-2ec7-4cb0-84ee-8f7f6dc9dd31" class="">Anna Dementyeva - <a href="mailto:anna.dementyeva@aalto.fi">anna.dementyeva@aalto.fi</a></p><p id="2c1fc3da-79a8-43e3-96c1-0a2b13ec4a9b" class="">
+</p><figure id="cd176c06-c9af-4d77-aa24-1af71c05a48b" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%202.png"><img style="width:336px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%202.png"/></a></figure><blockquote id="baa40e44-4976-4c95-909a-1d021f97ad78" class="">What is a single most important thing without which a startup cannot exist?</blockquote><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a8b5ee34-5d5d-450e-8b1f-4239568379c1"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">PAYING CUSTOMERS!</div></figure><p id="3067fb3c-5797-4b12-bfeb-7354f6b2d386" class="">
+</p><p id="1f85b3ed-6f9f-4ebb-ba36-faabcba7033a" class=""><strong>Product-Market Fit</strong></p><figure id="57483c74-26b9-42e6-81f2-2660c033974b" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%203.png"><img style="width:336px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%203.png"/></a></figure><p id="5a0f1f26-32c9-4d41-b089-fb37d034af8b" class="">Reasons to fail PMF:</p><figure id="36e83c5d-fb72-4584-b54c-1abe5625bfcd" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%204.png"><img style="width:480px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%204.png"/></a><figcaption><a href="https://www.cbinsights.com/research/report/startup-failure-reasons-top/">https://www.cbinsights.com/research/report/startup-failure-reasons-top/</a></figcaption></figure><h2 id="a99fbce6-d547-4ac1-a959-43ec6cad5362" class="">1. Product doesn’t match the need:</h2><div id="c0d4b02f-df15-441c-88e6-5a0b4b7f8ee9" class="column-list"><div id="b4ef4da4-cb92-485f-8f09-318aaff78e58" style="width:43.75%" class="column"><figure id="b6244011-f8cb-456a-b5b0-d8cd95ec07ed" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%205.png"><img style="width:336px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%205.png"/></a></figure></div><div id="f3920e6e-51d3-48fa-b1a6-7e9f51c5e65f" style="width:56.25%" class="column"><figure id="4623f4a8-98ef-44f3-919c-d83f7a1ef703" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%206.png"><img style="width:2150px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%206.png"/></a></figure></div></div><p id="4168ab2f-475f-469d-bfa1-83c3fe0bddca" class="">Is it a product or a feature?</p><div id="a9058753-7872-4314-80f9-8b054f7069ae" class="column-list"><div id="6d9af85a-f2af-4d10-a9b2-a5bdfb2a7ffb" style="width:50%" class="column"><figure id="dbd564b0-3986-4401-8a95-5cba393e3eb6" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%207.png"><img style="width:288px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%207.png"/></a></figure></div><div id="1edc5cfd-2c6f-49d6-a122-1a0255a32a9f" style="width:50%" class="column"><figure id="bbb4eb0e-c829-4876-9407-a1223ff17451" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%208.png"><img style="width:288px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%208.png"/></a></figure></div></div><blockquote id="cba65da4-766d-4e55-bf06-feaf226563e9" class=""><em>“Don’t find customers for your products, find products for your customers.”- Seth Godin</em></blockquote><h2 id="5a2cd44f-d859-453d-88ca-cdfe197d790a" class="">2. Failed implementation</h2><div id="2c0e1a23-fec2-473c-b4f0-2e7c9cf03152" class="column-list"><div id="4179d500-6c9b-45e5-be13-4529ab77120a" style="width:56.25%" class="column"><figure id="8c4e4b9d-8eaa-412f-8d8a-98e1092dc220" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%209.png"><img style="width:1460px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%209.png"/></a></figure></div><div id="5656901e-764d-467e-b068-50ed5be8b180" style="width:43.75000000000001%" class="column"><figure id="7d106f3e-c9e8-4be7-8d5c-55b175e8557d" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2010.png"><img style="width:384px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2010.png"/></a></figure></div></div><p id="7c0a1cb8-7ff5-4841-88d9-2b9e9012e49e" class="">How to know if I reached PMF?</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5e630d06-9df0-4385-ae8e-bd46dbc49986"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Traction</div></figure><p id="c28c9980-52b3-40bb-9092-fb890c5cdb62" class=""><strong>Indicators of reaching PMF for a product</strong></p><ol type="1" id="7aadba16-904e-4e88-9c77-27c46bcf5132" class="numbered-list" start="1"><li>Retention: Users stick around</li></ol><ol type="1" id="e2dbd662-fc60-492a-98ca-2332cc771466" class="numbered-list" start="2"><li>Exponential organic growth (word of mouth)</li></ol><ol type="1" id="1ccfb52a-6e40-47a3-b60b-2369f36d0130" class="numbered-list" start="3"><li>Cost-efficient growth</li></ol><ol type="1" id="5233b77a-bc0d-487e-9343-a074d5cee498" class="numbered-list" start="4"><li>CAC &lt; LTV (the value of each user is greater than the cost of bringing<br/>them into the product)<br/></li></ol><ol type="1" id="1397de04-018d-4991-9e74-df81d8b60b8b" class="numbered-list" start="5"><li>Customers are crazy for your product (high value prop)</li></ol><p id="4927b963-5f24-4f08-9fc9-b0702b6c0ed9" class=""><strong>Indicators of reaching PMF pre-launch:</strong></p><ol type="1" id="ac725ae0-8a0c-48bd-bceb-ec72274fbc6e" class="numbered-list" start="1"><li>People are willing to pay for it now</li></ol><ol type="1" id="5fcbb81c-cdce-4ab6-8166-80f946687ca5" class="numbered-list" start="2"><li>Visible excitement</li></ol><ol type="1" id="043bae9b-d0f6-4146-abb6-b2260794ac4a" class="numbered-list" start="3"><li>Extremely thorough market research and customer validation</li></ol><ol type="1" id="0e55b369-17d2-4ba1-bd5e-292f564e3b30" class="numbered-list" start="4"><li>Multiple tests and iterations with customers – know your customers’ pains<br/>and behaviors inside-out<br/></li></ol><ol type="1" id="9510046d-4c73-43f5-9e00-035fa65cac74" class="numbered-list" start="5"><li>A huge waiting list or community of potential customers</li></ol><figure id="4343bb3f-b1b7-4074-8585-4f18b1fc2183"><a href="https://www.lennysnewsletter.com/p/how-to-know-if-youve-got-productmarket" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">How to know if you&#x27;ve got product-market fit</div><div class="bookmark-description">Insights from Marc Andreessen, Elad Gil, Steve Blank, Andy Rachleff, Michael Seibel, and many more</div></div><div class="bookmark-href"><img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc7cde267-8f9e-47fa-9aef-5be03bad95ed%2Fapple-touch-icon-1024x1024.png" class="icon bookmark-icon"/>https://www.lennysnewsletter.com/p/how-to-know-if-youve-got-productmarket</div></div><img src="https://substackcdn.com/image/fetch/f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Flenny.substack.com%2Fapi%2Fv1%2Fpost_preview%2F240863%2Ftwitter.jpg%3Fversion%3D3" class="bookmark-image"/></a></figure><figure id="312ed529-f8bf-43d2-a856-14c0ed6feaca"><a href="https://medium.com/@LindsayT/use-this-definition-of-product-market-fit-if-youre-an-idea-pre-seed-startup-73df3253c1c3" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Use this Definition of Product-Market Fit if You’re a Pre-Seed Startup</div><div class="bookmark-description">Last week I held an initial networking call with a startup marketing expert out in Silicon Valley. He focuses primarily on Seed and Series…</div></div><div class="bookmark-href"><img src="https://miro.medium.com/v2/resize:fill:152:152/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" class="icon bookmark-icon"/>https://medium.com/@LindsayT/use-this-definition-of-product-market-fit-if-youre-an-idea-pre-seed-startup-73df3253c1c3</div></div><img src="https://miro.medium.com/v2/resize:fit:859/1*ZgeTmlQRf6hfrCOfjXEyZQ.png" class="bookmark-image"/></a></figure><figure id="dff76fbf-f883-4174-9494-463fcfa85c8e" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2011.png"><img style="width:384px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2011.png"/></a></figure><p id="717e443d-6059-4635-be3f-4875cf876ffa" class="">
+</p><h1 id="3133d3f3-6cc2-4c0c-b9df-69749062cec8" class="">Value proposition</h1><figure id="a11a514e-7108-4421-bbe2-89373717a4ac" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2012.png"><img style="width:672px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2012.png"/></a><figcaption>SO COMPLEX!</figcaption></figure><blockquote id="7add7a34-d1fc-446e-9aaf-e4aeb51b97ab" class=""><em>“why should I buy from you?”</em></blockquote><div id="416b32dd-1659-421b-82a8-8d89912091bb" class="column-list"><div id="a530abe2-451e-432f-b48c-4a0d1a48e669" style="width:43.75%" class="column"><figure id="d8d4abf1-3efc-4bcf-994b-77cb14b9e525" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2013.png"><img style="width:1602px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2013.png"/></a></figure></div><div id="6ee614ab-ee68-414c-a65f-dfbf5bcb6cbb" style="width:56.25%" class="column"><p id="ef61ff6a-ca87-419a-96bf-8a7763a7a19f" class="">
+</p><figure id="365a43d8-63ec-4ea2-8527-838b7533b0f9"><a href="https://www.garyfox.co/value-proposition-examples/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Value Proposition Examples: 30 Of The Best Ever Created</div><div class="bookmark-description">In this article, I&#x27;ve pulled together a list of value proposition examples and why they are so powerful.</div></div><div class="bookmark-href"><img src="https://www.garyfox.co/wp-content/uploads/2018/04/GF-creativity-bulb-300x300.png" class="icon bookmark-icon"/>https://www.garyfox.co/value-proposition-examples/</div></div><img src="https://www.garyfox.co/wp-content/uploads/2020/03/value-proposition-examples-featured.png" class="bookmark-image"/></a></figure></div></div><h2 id="71b3aedb-65f5-4477-b804-7a2c237938e5" class="">Examples</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="50a882e6-0485-4702-b207-52daaa9f65bc"><div style="font-size:1.5em"><span class="icon">❌</span></div><div style="width:100%">“Holvi is business banking for the self-employed and small businesses. We provide banking, invoicing, bookkeeping and a business credit card.”</div></figure><p id="abe97e06-0730-448c-af26-2d24eb506c58" class=""><strong><mark class="highlight-red">NOT A LIST OF FEATURES </mark></strong></p><p id="08a5ab2a-565f-4004-b8e1-0991ef248a98" class=""><strong><mark class="highlight-red">NOT A DESCRIPTION OF YOUR BUSINESS</mark></strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="07535433-fdf8-40d1-b46b-6eb0f4b9865c"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">“This is your life <span style="border-bottom:0.05em solid">simplified</span>. <span style="border-bottom:0.05em solid">Everything in one place</span> and you’re in <span style="border-bottom:0.05em solid">control</span>. Made for <span style="border-bottom:0.05em solid">sole<br/>traders and ltds<br/></span>”</div></figure><p id="2c08e37b-5fe8-4479-accd-f768a2adcb09" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="450ebccc-72cf-475e-b0db-781272408ff7"><div style="font-size:1.5em"><span class="icon">❌</span></div><div style="width:100%">“Get ready to look, feel, and smell your best.”</div></figure><p id="344466c4-d0d5-4f92-8d57-2924e73f3123" class=""><strong><mark class="highlight-red">NOT A SLOGAN</mark></strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="47079534-3cd3-4076-a180-671ca2b121a1"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">“The Dollar Shave Club helps people by offering <span style="border-bottom:0.05em solid">quality</span> blades and other products <span style="border-bottom:0.05em solid">delivered to your door</span> at<br/><br/><span style="border-bottom:0.05em solid">lower costs</span> than big brands in retail shops.”</div></figure><p id="d6d492a8-fa49-4400-a258-03c83c8e8c93" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9b39529c-4220-4e85-a15a-e5aa1a00746d"><div style="font-size:1.5em"><span class="icon">❌</span></div><div style="width:100%">“Tap into motivation and feel energized”</div></figure><p id="41aea85e-044c-4f18-8b34-5d0b39b75410" class=""><strong><mark class="highlight-red">CLEAR AND SPECIFIC TO YOUR CUSTOMER’S PAIN</mark></strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f2d00694-67da-4b26-8e47-db806bef2dbb"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">“Peloton offers <span style="border-bottom:0.05em solid">convenience</span> by being able to create a fitness regime <span style="border-bottom:0.05em solid">around your own timetable</span> <span style="border-bottom:0.05em solid">rather than the gym’s schedule.</span>”</div></figure><h3 id="4b655306-b4e3-4408-ba2a-7c16a8c2f233" class="">Important graphics</h3><div id="6cc9230e-d5f5-47ef-8d25-3625e7e902cd" class="column-list"><div id="a03b6c90-913d-494a-851f-5596298d9fa8" style="width:43.75%" class="column"><figure id="0374a8a1-1392-4814-8861-358ab3406f11" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2014.png"><img style="width:920px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2014.png"/></a></figure><figure id="c74eb28b-5947-4b86-a25b-99c63dadd914"><a href="https://hbr.org/2016/09/the-elements-of-value" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The 30 Elements of Consumer Value: A Hierarchy</div><div class="bookmark-description">What consumers truly value can be difficult to pin down and psychologically complicated. But universal building blocks of value do exist, creating opportunities for companies to improve their performance in existing markets or break into new markets. In the right combinations, the authors’ analysis shows, those elements will pay off in stronger customer loyalty, greater consumer willingness to try a particular brand, and sustained revenue growth. Three decades of experience doing consumer research and observation for corporate clients led the authors—all with Bain &amp; Company—to identify 30 “elements of value.” Their model traces its conceptual roots to Abraham Maslow’s “hierarchy of needs” and extends his insights by focusing on people as consumers: describing their behavior around products and services. They arrange the elements in a pyramid according to four kinds of needs, with “functional” at the bottom, followed by “emotional,” “life changing,” and then “social impact” at the peak. The authors provide real-world examples to demonstrate how companies have used the elements to grow revenue, refine product design to better meet customers’ needs, identify where customers perceive strengths and weaknesses, and cross-sell services.</div></div><div class="bookmark-href"><img src="https://hbr.org/resources/images/android-chrome-512x512.png" class="icon bookmark-icon"/>https://hbr.org/2016/09/the-elements-of-value</div></div><img src="https://hbr.org/resources/images/article_assets/2016/07/R1609C_CAM.jpg" class="bookmark-image"/></a></figure><p id="fafb2ffb-5bba-4c27-a0a3-62df0e2a4927" class="">
+</p></div><div id="019b1923-469d-42bf-bff2-ec5929e76016" style="width:56.25%" class="column"><figure id="d6f2a1b5-5e35-416f-8fbb-554c981f0c46" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2015.png"><img style="width:1662px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2015.png"/></a></figure><figure id="cd287bed-aad4-4a6b-b971-eefecc0a4046"><a href="https://www.sitra.fi/en/publications/motivation-profiles-of-a-sustainable-lifestyle/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Motivation profiles of a sustainable lifestyle - Sitra</div><div class="bookmark-description">What motivates us as we go about living our daily lives and why is it even important to talk about those motivations? These are the questions this publication tries to answer. As a precursor, when we understand better the factors that motivate us, we can inspire everyone to make choices and take actions that are not only meaningful to us but also more environmentally sustainable. Through this publication, we introduce seven different motivation profiles that help you understand different motivations that drive our lives and identify more engaging and meaningful practices to promote a transition to more sustainable lifestyles.</div></div><div class="bookmark-href"><img src="https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_webp/www.sitra.fi/app/themes/sitra-v2/public/images/favicons/apple-touch-icon.png?id=af7fa61a3901ad714347" class="icon bookmark-icon"/>https://www.sitra.fi/en/publications/motivation-profiles-of-a-sustainable-lifestyle/</div></div><img src="https://www.sitra.fi/app/uploads/2021/09/paakuva.jpg" class="bookmark-image"/></a></figure><p id="2fef76fb-656e-4c15-b5c0-92ae0342d645" class="">
+</p></div></div><figure id="831f1ff3-e087-4306-9339-d9a3a522e08a" class="image"><a href="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2016.png"><img style="width:1246px" src="5)%20Value%20Proposition%208ec4e5a01392418aa02ebbacec0b6d84/Untitled%2016.png"/></a></figure><hr id="77ad11e6-127d-4e61-bbc8-34dc1bcbe568"/><div id="ca03f6cd-6a85-4ebc-b3c0-fb297c192f2e" class="column-list"><div id="d8759f31-8aa1-4741-97be-20952c6e86fa" style="width:62.5%" class="column"><h3 id="0d9d9b57-716b-4a41-8f31-04680522c204" class="">Daily dose of info:</h3><p id="905fd6fa-cd76-4b67-bbfd-ec8cd0f60bd0" class="">
+</p><p id="c9518c1a-0b6e-48dd-aa72-3b277de7b177" class=""><em>Examples of value proposition</em></p><p id="3ecab385-563d-4c68-a772-669a1414620e" class="">
+</p><hr id="8e3b5f38-5cfb-41f3-9be9-5390301b3875"/><p id="05ae6cf9-faff-4437-b8fe-cddd86c2b94c" class="">
+</p><p id="bd0dc800-ff3b-4a19-b69d-15594c81c9f8" class=""><em>Instructions for valupe proposition canvas</em></p><p id="28dd60fa-9b99-4b20-8a24-f46bf9584a8a" class="">
+</p></div><div id="7589d93f-60c2-436b-a807-fd3969b1c933" style="width:37.5%" class="column"><p id="2588b45a-540d-4bd5-a378-0733238ccec4" class="">
+</p><figure id="849b174b-9484-44f9-8499-3c91ce74cfdc"><a href="https://www.garyfox.co/value-proposition-examples/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Value Proposition Examples: 30 Of The Best Ever Created</div><div class="bookmark-description">In this article, I&#x27;ve pulled together a list of value proposition examples and why they are so powerful.</div></div><div class="bookmark-href"><img src="https://www.garyfox.co/wp-content/uploads/2018/04/GF-creativity-bulb-300x300.png" class="icon bookmark-icon"/>https://www.garyfox.co/value-proposition-examples/</div></div><img src="https://www.garyfox.co/wp-content/uploads/2020/03/value-proposition-examples-featured.png" class="bookmark-image"/></a></figure><hr id="b3b6a32f-90ac-4099-a7d6-02ea2d4bea01"/><figure id="f5c2fe9d-2ac7-456a-9fd3-f2471ce99232"><a href="https://www.garyfox.co/canvas-models/value-proposition-canvas-guide/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">How To Use The Value Proposition Canvas - 10 Step Guide Plus Free Templates</div><div class="bookmark-description">If you really care about your customers, really want to understand them, then the value proposition canvas is a tool that will transform how you innovate and</div></div><div class="bookmark-href"><img src="https://www.garyfox.co/wp-content/uploads/2018/04/GF-creativity-bulb-300x300.png" class="icon bookmark-icon"/>https://www.garyfox.co/canvas-models/value-proposition-canvas-guide/</div></div><img src="https://i.ytimg.com/vi/OzezRI9KNKY/hqdefault.jpg" class="bookmark-image"/></a></figure><p id="5537706c-bda4-4b11-bf43-3e7e2d63e011" class="">
+</p></div></div><p id="d8f43cfb-a39d-49bf-8d1b-4ac5b5a91d61" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
